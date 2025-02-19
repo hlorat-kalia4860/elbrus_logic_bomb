@@ -8,7 +8,7 @@ case "$1" in
     echo $@ >> ./config
     echo "$@ записаны в конфиг"
     exit 0;;
--c) cat ./config > $var;;
+-c) var=$(cat ./config);;
 -f) shift
     var=$@;;
 --clear) echo "" > ./config
